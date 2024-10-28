@@ -1,0 +1,68 @@
+@import "compass";
+
+$size: 48px;
+
+$fullname-color: #333;
+$username-color: #999;
+$twitter-color: #099;
+
+.twidget_widget {
+
+	.twidget_tweet {
+		min-height: 60px;
+	}
+
+	a {
+		color: $twitter-color!important;
+	}
+	
+
+	div.tweet-header {
+
+		font-size: 14px;
+		font-family: Arial, sans-serif;
+
+		a {
+			color: $username-color;
+			text-decoration: none;
+		}
+
+		a:hover > strong.author-fullname {
+			text-decoration: underline;
+			color: $twitter-color;
+		}
+
+		img.avatar {
+			float: left;
+			margin-top: 3px;
+			width: $size; height: $size;
+			@include border-radius(5px);
+			-moz-force-broken-image-icon: 1;
+		}
+
+		strong.author-fullname {
+			color: $fullname-color;
+		}
+
+		span.author-username {
+			color: $username-color;
+			font-size: 12px;
+			font-weight: normal;
+		}
+
+		span.date-create {
+			float:right;
+			font-size: 12px;
+			color: $username-color;
+		}
+	}
+
+	p {
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+	}
+	p > a {
+		font-weight: normal;
+
+	}
+}
